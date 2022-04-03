@@ -1,0 +1,19 @@
+{
+  "name": "iot-server",
+  "version": "1.0.0",
+  "description": "IoT Server for Smart Health Monitoring System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/subhashissuara/smart-health-monitoring-system.git"
+  },
+  "author": "Subhashis Suara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subhashissuara/smart-health-monitoring-system/issues"
+  },
+  "homepage": "https://github.com/subhashissuara/smart-health-monitoring-system#readme"
+}
