@@ -4,6 +4,8 @@
   "description": "IoT Server for Smart Health Monitoring System",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/subhashissuara/smart-health-monitoring-system/issues"
   },
-  "homepage": "https://github.com/subhashissuara/smart-health-monitoring-system#readme"
+  "homepage": "https://github.com/subhashissuara/smart-health-monitoring-system#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "ws": "^8.5.0"
+  }
 }
