@@ -1,6 +1,7 @@
 const WebSocket = require("ws");
 
-const ws = new WebSocket("ws://localhost:5000");
+// const ws = new WebSocket("ws://localhost:5000");
+const ws = new WebSocket("ws://52.172.44.216:5000");
 
 function LDRValue() {
   return Math.round(Math.random() * 100000);
@@ -18,7 +19,7 @@ ws.on("open", () => {
   setInterval(() => {
     sensorValue = LDRValue();
     const data = {
-      type: "SENSOR",
+      type: "IOT_DEVICE",
       sensorData: {
         sensorType: "photoresistor",
         sensorStatus: sensorStatus(sensorValue),

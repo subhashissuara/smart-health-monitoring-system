@@ -1,0 +1,79 @@
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.7;
+  background: #eeeeee;
+  color: #333333;
+}
+
+.form-group,
+.form-group label,
+.form-group input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background-color: #eeeeee;
+  outline-width: 0;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  border-bottom: 3px solid #ffb703;
+}
+
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  font-weight: 700;
+  background-color: #ffb703;
+  color: #ffffff;
+}
+
+.error-message {
+  width: 100%;
+  display: inline-block;
+  padding: 5px;
+  background: red;
+  color: #ffffff;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.success-message {
+  width: 100%;
+  display: inline-block;
+  padding: 5px;
+  background: green;
+  color: #ffffff;
+  text-align: center;
+  margin: 5px 0;
+}

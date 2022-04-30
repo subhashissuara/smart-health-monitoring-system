@@ -8,7 +8,13 @@ var helmet = require("helmet");
 var morgan = require("morgan");
 var fs = require("fs");
 var path = require("path");
+const cors = require("cors");
 
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
 var logStream = fs.createWriteStream(path.join(__dirname, "logs/access.log"), { flags: "a" });
 
 // Connect DB
@@ -17,6 +23,7 @@ connectDB();
 const app = express();
 
 app.use(morgan("dev", { stream: logStream }));
+app.use(cors(corsOptions));
 app.use(helmet());
 app.use(express.json());
 

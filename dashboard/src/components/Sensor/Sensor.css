@@ -1,0 +1,52 @@
+.sensor-container {
+  width: 100%;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sensor-text {
+  margin-left: 10px;
+}
+
+.sensor-text-content {
+  margin-left: 18px;
+}
+
+.indicator.online {
+  background: rgb(140, 233, 0);
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 3px;
+  border-radius: 50%;
+  animation: pulse-animation 2s infinite linear;
+}
+
+@keyframes pulse-animation {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+.indicator.offline {
+  background: #ff4136;
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 3px;
+  border-radius: 50%;
+}
