@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./Dashboard.css";
 import Navbar from "../NavBar/NavBar";
-import { LDRConfig } from "./sensorConfigs";
+import { Patient } from "../../config/sensorConfigs";
 import Sensor from "../Sensor/Sensor";
 import config from "../../config/config.json";
 
@@ -19,6 +19,7 @@ const Dashboard = ({ history }) => {
     const connectWebSocket = () => {
       ws.current = new WebSocket(config.PRODUCTION_URL_WS);
       const jsonClientType = {
+        deviceId: "DASHBOARD",
         type: "DASHBOARD",
       };
 
@@ -37,12 +38,13 @@ const Dashboard = ({ history }) => {
       };
 
       ws.current.onmessage = ({ data }) => {
+        // console.log(`Message from Server: ${data}`);
         setSensorData(JSON.parse(data));
       };
     };
 
     const authenticate = async () => {
-      const config = {
+      const request_config = {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -50,7 +52,7 @@ const Dashboard = ({ history }) => {
       };
 
       try {
-        const { data } = await axios.get("/api/authorize", config);
+        const { data } = await axios.get(config.PRODUCTION_URL_AUTHORIZE, request_config);
         if (data.data === "ACCESS_GRANTED") {
           connectWebSocket();
         }
@@ -78,7 +80,7 @@ const Dashboard = ({ history }) => {
     <>
       <Navbar history={history} />
       <div className="data">
-        <Sensor sensorConfig={LDRConfig} sensorData={sensorData} />
+        <Sensor sensorConfig={Patient} sensorData={sensorData} />
       </div>
     </>
   );

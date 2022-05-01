@@ -12,7 +12,7 @@ const Navbar = ({ history }) => {
     <nav>
       <div className="nav-container">
         <NavLink exact to="/" className="nav-logo">
-          <h2>IoT Dashboard</h2>
+          <h2>Smart Health Monitoring System</h2>
         </NavLink>
         <div className="nav-links">
           <button onClick={logoutHandler} className="nav-btn">

@@ -7,19 +7,65 @@
 }
 
 .sensor-text {
-  margin-left: 10px;
+  font-weight: 600;
+  padding: 0px 10px;
 }
 
-.sensor-text-content {
-  margin-left: 18px;
+.sensor-text-heading {
+  margin-bottom: 10px;
+}
+
+.details-container {
+  width: 100%;
+  margin: 0px 0px 30px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.patient-metadata-container {
+  flex: 1;
+  border-right: 1px solid #000;
+  padding: 0px 5px;
+}
+
+.sensor-details-container {
+  flex: 1;
+  padding: 0px 5px 0px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .details-container {
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .patient-metadata-container {
+    border: none;
+  }
+
+  .sensor-details-container {
+    padding: 0px 5px;
+  }
+}
+
+.patient-metadata {
+  margin-left: 20px;
+}
+
+.sensor-details {
+  margin-left: 20px;
 }
 
 .indicator.online {
   background: rgb(140, 233, 0);
   display: inline-block;
-  width: 0.7em;
-  height: 0.7em;
-  margin-left: 3px;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 4px;
   border-radius: 50%;
   animation: pulse-animation 2s infinite linear;
 }
@@ -45,8 +91,17 @@
 .indicator.offline {
   background: #ff4136;
   display: inline-block;
-  width: 0.7em;
-  height: 0.7em;
-  margin-left: 3px;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 4px;
   border-radius: 50%;
+}
+
+@media only screen and (min-width: 600px) {
+  .sensor-chart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

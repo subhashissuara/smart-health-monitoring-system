@@ -2,7 +2,10 @@
   "TEST_URL_WS": "ws://localhost:5000",
   "TEST_URL_LOGIN": "http://localhost:5000/api/authenticate/login",
   "TEST_URL_REGISTER": "http://localhost:5000/api/authenticate/register",
+  "TEST_URL_AUTHORIZE": "http://localhost:5000/api/authorize",
+  "PRODUCTION_URL_AUTHORIZE": "http://52.172.44.216:5000/api/authorize",
   "PRODUCTION_URL_WS": "ws://52.172.44.216:5000",
   "PRODUCTION_URL_LOGIN": "http://52.172.44.216:5000/api/authenticate/login",
-  "PRODUCTION_URL_REGISTER": "http://52.172.44.216:5000/api/authenticate/register"
+  "PRODUCTION_URL_REGISTER": "http://52.172.44.216:5000/api/authenticate/register",
+  "DEVICE_IDS": ["IOT_DEVICE_1", "IOT_DEVICE_2"]
 }

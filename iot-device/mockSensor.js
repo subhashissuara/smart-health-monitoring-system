@@ -21,8 +21,8 @@ ws.on("open", () => {
     const data = {
       type: "IOT_DEVICE",
       sensorData: {
-        sensorType: "photoresistor",
-        sensorStatus: sensorStatus(sensorValue),
+        deviceId: "IOT_DEVICE_1",
+        sensorType: "IOT_DEVICE",
         timestamp: Date.now(),
         sensorValue: sensorValue,
       },

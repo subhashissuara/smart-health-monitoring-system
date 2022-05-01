@@ -41,7 +41,7 @@ const LoginScreen = ({ history }) => {
   return (
     <div className="login-screen">
       <form onSubmit={loginHandler} className="login-screen-form">
-        <h2 className="login-screen-title">IoT Dashboard</h2>
+        <h2 className="login-screen-title">Smart Health Monitoring System</h2>
         {error && <span className="error-message">{error}</span>}
         <div className="form-group">
           <label htmlFor="email">Email</label>

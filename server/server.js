@@ -15,6 +15,7 @@ const corsOptions = {
   credentials: true,
   optionSuccessStatus: 200,
 };
+
 var logStream = fs.createWriteStream(path.join(__dirname, "logs/access.log"), { flags: "a" });
 
 // Connect DB
@@ -42,12 +43,12 @@ wss.on("connection", function connection(ws) {
   console.log("New Device Connected!");
 
   ws.on("message", (data) => {
-    console.log(data);
+    // console.log(data);
 
     var jsonData = {};
     try {
       jsonData = JSON.parse(data);
-      ws.type = jsonData.type;
+      ws.deviceId = jsonData.deviceId;
     } catch (error) {
       console.log(`Parse Error: ${error}`);
     }
@@ -55,6 +56,7 @@ wss.on("connection", function connection(ws) {
     if (jsonData.type === "DASHBOARD") {
       DASHBOARDS.push(ws);
     }
+
     if (jsonData.type === "IOT_DEVICE") {
       if (DASHBOARDS.length > 0) {
         for (let i = 0; i < DASHBOARDS.length; i++) {
@@ -65,7 +67,7 @@ wss.on("connection", function connection(ws) {
   });
 
   ws.on("close", () => {
-    console.log(`${ws.type} Disconnected!`);
+    console.log(`${ws.deviceId} Disconnected!`);
   });
 });
 
