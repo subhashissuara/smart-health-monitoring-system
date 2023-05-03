@@ -3,3 +3,11 @@
   margin: 100px auto;
   padding: 0px 15px;
 }
+
+@media only screen and (max-width: 600px) {
+  .data {
+    max-width: 1200px;
+    margin: 140px auto;
+    padding: 0px 15px;
+  }
+}

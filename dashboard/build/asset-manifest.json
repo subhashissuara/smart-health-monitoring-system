@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/smart-health-monitoring-system/static/css/main.3b976d09.chunk.css",
+    "main.js": "/smart-health-monitoring-system/static/js/main.26f83e3c.chunk.js",
+    "main.js.map": "/smart-health-monitoring-system/static/js/main.26f83e3c.chunk.js.map",
+    "runtime-main.js": "/smart-health-monitoring-system/static/js/runtime-main.3f47cde9.js",
+    "runtime-main.js.map": "/smart-health-monitoring-system/static/js/runtime-main.3f47cde9.js.map",
+    "static/js/2.8af87760.chunk.js": "/smart-health-monitoring-system/static/js/2.8af87760.chunk.js",
+    "static/js/2.8af87760.chunk.js.map": "/smart-health-monitoring-system/static/js/2.8af87760.chunk.js.map",
+    "static/js/3.ecdab142.chunk.js": "/smart-health-monitoring-system/static/js/3.ecdab142.chunk.js",
+    "static/js/3.ecdab142.chunk.js.map": "/smart-health-monitoring-system/static/js/3.ecdab142.chunk.js.map",
+    "index.html": "/smart-health-monitoring-system/index.html",
+    "static/css/main.3b976d09.chunk.css.map": "/smart-health-monitoring-system/static/css/main.3b976d09.chunk.css.map",
+    "static/js/2.8af87760.chunk.js.LICENSE.txt": "/smart-health-monitoring-system/static/js/2.8af87760.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f47cde9.js",
+    "static/js/2.8af87760.chunk.js",
+    "static/css/main.3b976d09.chunk.css",
+    "static/js/main.26f83e3c.chunk.js"
+  ]
+}

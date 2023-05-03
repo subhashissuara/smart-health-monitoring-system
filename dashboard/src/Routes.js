@@ -10,7 +10,7 @@ import LoginScreen from "./components/LoginScreen/LoginScreen";
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <DashboardRoute exact path="/" component={Dashboard} />
         <Route exact path="/login" component={LoginScreen} />
